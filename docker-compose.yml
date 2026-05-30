@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  middleware:
+    build:
+      context: ./middleware
+      dockerfile: Dockerfile
+    container_name: borsa_middleware
+    environment:
+      - MIDDLEWARE_HOST=0.0.0.0
+      - MIDDLEWARE_PORT=9999
+      - LOGS_DIR=/app/logs
+    ports:
+      - "9999:9999"
+    volumes:
+      # Çıktı log dosyalarını bilgisayarımızdan anlık görebilmek için dizin bağlama (volume mount)
+      - ./logs:/app/logs
+
+  generator:
+    build:
+      context: ./generator
+      dockerfile: Dockerfile
+    container_name: borsa_generator
+    environment:
+      - MIDDLEWARE_HOST=middleware
+      - MIDDLEWARE_PORT=9999
+      # Saniyede gönderim hızı sınırı (0: Sınırsız / Benchmark Modu)
+      - RATE_LIMIT=0
+      # Test için üretilecek toplam log sayısı
+      - TOTAL_LOGS=100000
+    depends_on:
+      - middleware
