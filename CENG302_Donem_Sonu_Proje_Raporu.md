@@ -138,23 +138,20 @@ Compose dosyasında iki adet servis tanımlanmıştır:
 
 ---
 
-## 7. ÇALIŞTIRMA KILAVUZU VE SORUN GİDERME
+## 7. ÇALIŞTIRMA KILAVUZU
 
-### A. Docker Engine Bulunamadı Hatası Çözümü
+### A. Projeyi Docker ile Çalıştırma
 
-Eğer terminalde `docker compose` çalıştırdığınızda `"The term 'docker' is not recognized"` hatası alıyorsanız, bilgisayarınızda Docker komut satırı araçları yüklü değildir veya PATH ortam değişkenlerine eklenmemiştir.
+Projeyi Docker kullanarak çalıştırmak için aşağıdaki adımları uygulayabilirsiniz:
 
-**Adım Adım Çözüm:**
-
-1.  [Docker Desktop Resmi Sitesi](https://www.docker.com/products/docker-desktop/) adresinden Windows için Docker Desktop'ı indirin ve kurun.
-2.  Kurulum sırasında **WSL 2** veya **Hyper-V** seçeneklerini etkinleştirin (varsayılan olarak etkindir).
-3.  Kurulum tamamlandıktan sonra bilgisayarınızı yeniden başlatın veya oturumu kapatıp açın (PATH değişkenlerinin güncellenmesi için bu gereklidir).
-4.  Docker Desktop uygulamasını çalıştırın ve sol alttaki ikonun **yeşil (running)** olduğundan emin olun.
-5.  VS Code terminalini (veya PowerShell'i) kapatıp **yeni bir pencere** olarak tekrar açın.
-6.  Aşağıdaki komutu çalıştırarak test edin:
-    ```powershell
-    docker compose up --build
-    ```
+1. Bilgisayarınızda **Docker Desktop** uygulamasının çalışır durumda olduğundan emin olun.
+2. VS Code terminalini veya PowerShell'i açıp projenin ana dizinine gidin.
+3. Aşağıdaki komutu çalıştırarak konteynerleri derleyin ve sistemi başlatın:
+   ```powershell
+   docker compose up --build
+   ```
+4. Sistem otomatik olarak çalışacak, ara katman soket üzerinden logları kabul edecek ve canlı performans metriklerini ekrana basacaktır.
+5. İşlem bittiğinde, üretilen HTML, CSV ve JSON çıktıları bilgisayarınızdaki `logs/` dizinine otomatik olarak yazılacaktır.
 
 ### B. Projeyi Docker Olmadan Doğrudan Çalıştırma (Alternatif Hızlı Test)
 
