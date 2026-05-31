@@ -1,3 +1,9 @@
+# Bu dosyanın amacı Strategy Pattern (Strateji Tasarım Kalıbı) kullanarak,
+
+# işlenmiş log verilerini farklı kullanıcı rolleri için (System Admin -> HTML, CyberSec -> CSV, Web Dev -> JSON)
+# dinamik olarak formatlamaktır. FormatterStrategy soyut sınıfından türeyen HtmlFormatter,
+# CsvFormatter ve JsonFormatter stratejileri bu amaca hizmet eder.
+
 from abc import ABC, abstractmethod
 import json
 import time

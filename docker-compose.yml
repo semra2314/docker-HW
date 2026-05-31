@@ -1,3 +1,6 @@
+# Bu dosyanın amacı iki Docker konteynerini (middleware ve generator) tek komutla
+# entegre bir ağ üzerinde ayağa kaldırmak ve aralarındaki çevre değişkenlerini ve volume paylaşımlarını yönetmektir.
+
 version: '3.8'
 
 services:

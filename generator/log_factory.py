@@ -1,3 +1,5 @@
+# bu dosyanın amacı generator.py dosyasında üretilen logları kullanarak 5 farklı log türü üretmek.
+ 
 import random
 import time
 import uuid

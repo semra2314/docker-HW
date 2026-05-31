@@ -1,3 +1,7 @@
+# bu dosyanın amacı middleware'e log göndermek TCP soket üzerinden.
+# Loglar log_factory.py dosyasında üretiliyor. 
+# log_factory.py dosyasında 5 farklı log türü üretiliyor. Bu loglar random.choices fonksiyonu ile seçiliyor. 
+# 
 import asyncio
 import json
 import os

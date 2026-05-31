@@ -1,3 +1,5 @@
+# Bu dosyanın amacı log üretici (generator) modülünü Docker konteynerine yüklemek ve yapılandırmaktır.
+
 FROM python:3.11-slim
 
 # Python çıktılarının tamponlanmadan konsola anında yazdırılmasını sağlar

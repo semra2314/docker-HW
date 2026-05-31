@@ -1,3 +1,5 @@
+# Bu dosyanın amacı middleware'i docker container'a yüklemek. 
+
 FROM python:3.11-slim
 
 # Python çıktılarının tamponlanmadan konsola anında yazdırılmasını sağlar

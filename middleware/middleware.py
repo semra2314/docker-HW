@@ -1,3 +1,8 @@
+
+
+# Bu dosyanın amacı ara katman (middleware) sunucusunu başlatmak ve ana akışı yönetmektir.
+# Asenkron TCP sunucusu kurarak generator'dan gelen log akışını dinler, sorumluluk zincirini (pipeline)
+# çalıştırır ve işlenen verileri BufferedWriter yardımıyla diske tamponlu şekilde yazar.
 import asyncio
 import json
 import os

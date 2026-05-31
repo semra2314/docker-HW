@@ -1,3 +1,9 @@
+# Bu dosyanın amacı Chain of Responsibility Pattern (Sorumluluk Zinciri Tasarım Kalıbı) kullanarak,
+
+# gelen borsa loglarını sırasıyla Filtreleme (FilterHandler), KVKK/GDPR Maskeleme (SecurityHandler)
+# ve Metadata Ekleme/Zenginleştirme (EnrichmentHandler) işlemlerinden geçirmektir.
+# Her handler işini yaptıktan sonra veriyi zincirdeki bir sonraki halkaya iletir.
+
 from abc import ABC, abstractmethod
 import re
 import socket

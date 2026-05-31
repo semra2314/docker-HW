@@ -1,3 +1,8 @@
+# Bu dosyanın amacı Singleton Pattern (Tekil Tasarım Kalıbı) kullanarak,
+
+# sistemin canlı performans verilerini (anlık/ortalama TPS, filtreleme oranları, gecikme süreleri)
+# tüm ara katman boyunca tek bir merkezi sayaçtan takip etmektir.
+
 import threading
 import time
 
